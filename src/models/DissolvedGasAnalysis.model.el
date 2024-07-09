@@ -1,0 +1,24 @@
+domain DissolvedGasAnalysis
+
+import './Units'
+
+/**
+* This model describes the components of a Dissolved Gas Analysis (DGA)
+* DGA is a fundamental condition monitoring diagnosis tool for liquid-filled
+* Power Transformers
+*/
+model DissolvedGasAnalysis {
+    sampleNumber: text
+    samplingDate: text
+    analysisDate: text
+
+    hydrogen: number_[Concentration]
+    methane: number_[Concentration]
+    ethane: number_[Concentration]
+    ethylene: number_[Concentration]
+    acetylene: number_[Concentration]
+    carbonMonoxide: number_[Concentration]
+    carbonDioxide: number_[Concentration]
+    oxygen: number_[Concentration]
+    nitrogen: number_[Concentration]
+}
