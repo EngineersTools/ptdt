@@ -7,7 +7,7 @@ import './Units'
 * DGA is a fundamental condition monitoring diagnosis tool for liquid-filled
 * Power Transformers
 */
-model DissolvedGasAnalysis {
+export model DissolvedGasAnalysis {
     sampleNumber: text
     samplingDate: text
     analysisDate: text

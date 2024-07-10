@@ -30,6 +30,14 @@ export unit_family Time {
     conversion yr->mth: (val) => val * 12
 }
 
+export unit_family Temperature {
+    unit degC:DegreeCelsius
+    unit degF:DegreeFarenheit
+
+    conversion degC->degF: (val) => ((9/5) * val) + 32
+    conversion degF->degC: (val) => (5/9) * (val - 32)
+}
+
 export unit_family Voltage {
     unit V:Volt
     unit kV:kiloVolt
@@ -57,6 +65,17 @@ export unit_family Power {
     conversion MVA->kVA: (val) => val * 1000
     conversion kVA->VA: (val) => val * 1000
     conversion MVA->VA: (val) => val->kVA->VA
+}
+
+export unit_family Mass {
+    unit g:gram
+    unit kg:kilogram
+    unit ton:MetricTon
+
+    conversion g->kg: (val) => val / 1000
+    conversion kg->ton: (val) => val /1000
+    conversion ton->kg: (val) => val * 1000
+    conversion kg->g: (val) => val * 1000
 }
 
 export unit_family Volume {
