@@ -1,8 +1,9 @@
 domain PowerTransformer
 
-import './DissolvedGasAnalysis'
+import './ConditionAssessment.model'
+import './DissolvedGasAnalysis.model'
+import './Manufacturer.model'
 import './Units'
-import './Manufacturer'
 
 /**
 * This is the main model describing the properties of
@@ -31,6 +32,8 @@ export model PowerTransformer {
 
     // Condition Indicators
     oilAnalyses: DissolvedGasAnalysis list
+
+    conditionAssessments: ConditionAssessment list
 }
 
 export model Component {
