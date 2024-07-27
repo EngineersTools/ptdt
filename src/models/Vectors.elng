@@ -1,6 +1,12 @@
 domain Vectors
 
-export model Vector {
-    x: number
-    y: number
+import './Units'
+
+export model Vector2D {
+    x0?: number
+    y0?: number
+    x1?: number
+    y1?: number
+    mag?: number
+    angle?: number_[Angle]
 }

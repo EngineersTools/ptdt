@@ -4,12 +4,14 @@
 
 A project focused on creating a digital model describing the **electrical**, **mechanical**, **thermal** and **chemical** behaviour of a power transformer.
 
-
 As much as possible, the algorithms in this model are based in international standards and guidelines from **IEEE**, **IEC**, and **CIGRE**.
 
 This digital twin is fully open source distributed under the MIT license and implemented using the [e-lang engineering programming language](https://github.com/EngineersTools/e-lang).
 
+The best way to visualise, interact and experiment with this digital twin is using a code editor, we suggest using [VSCode](https://code.visualstudio.com/) and installing the [e-lang](https://marketplace.visualstudio.com/items?itemName=EngineersTools.e-lang) extension.
+
 A digital twin like this has many use cases in asset managment, for example:
+
 - failure mode identification
 - condition assessment
 - root cause analysis
