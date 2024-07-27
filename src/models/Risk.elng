@@ -1,0 +1,19 @@
+domain Risk
+
+export const SEVERITY = {
+    LOW: 'Low',
+    MEDIUM: 'Medium',
+    HIGH: 'High'
+}
+
+export const LIKELIHOOD = {
+    LOW: 'Low',
+    MEDIUM: 'Medium',
+    HIGH: 'High'
+}
+
+export model Risk {
+    description: text "A description of the risk"
+    severity: text "The severity of the risk"
+    likelihood: text "The likelihood of the risk"
+}

@@ -1,0 +1,21 @@
+domain Asset
+
+import './Manufacturer'
+
+/**
+* This is the main model describing the properties of
+* an Asset. An Asset represents a generic piece of plant
+* or equipment that is part of a larger system.
+* It is often used in the context of the Asset Management
+* domain.
+*/
+export model Asset {
+    identifier: text or number "The unique identifier of the asset"
+    name: text "The name of the asset. Typically a short human-readable way of referring to this asset"
+    description?: text "A longer description of the asset"
+    manufacturer?: Manufacturer "The manufacturer of the asset"
+    yearOfManufacture?: number "The year the asset was manufactured"
+    manufacturerModel?: text "The model number of the asset"
+    serialNumber?: text "The serial number of the asset"
+
+}

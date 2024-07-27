@@ -17,6 +17,8 @@ A digital twin like this has many use cases in asset managment, for example:
 - root cause analysis
 - operational decision-making
 
+All these files are located in the [src](./src/) folder of this repository.
+
 ## Architecture
 
 At a high level, PTDT is implemented in four main layers that allows it to interact with the external world. Both ingesting data and producing results. These layers are:

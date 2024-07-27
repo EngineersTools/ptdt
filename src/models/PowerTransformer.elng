@@ -1,22 +1,17 @@
 domain PowerTransformer
 
-import './ConditionAssessment.model'
-import './DissolvedGasAnalysis.model'
-import './Manufacturer.model'
+import './Asset'
+import './ConditionAssessment'
+import './DissolvedGasAnalysis'
+import './Manufacturer'
 import './Units'
 
 /**
 * This is the main model describing the properties of
 * a Power Transformer
 */
-export model PowerTransformer {
+export model PowerTransformer extends Asset {
     // Descriptors
-    identifier: text
-    manufacturer: Manufacturer
-    yearOfManufacture: number
-    manufacturerModel?: text
-    serialNumber: text
-
     frequency: number_[Frequency]
     numberOfPhases: number
     connectionGroup: text
@@ -27,20 +22,31 @@ export model PowerTransformer {
     powerRatings: PowerRating list
     voltageRatings: VoltageRating list
     currentRatings: CurrentRating list
+    impedances: Impedance list
 
     components: Component list
 
     // Condition Indicators
     oilAnalyses: DissolvedGasAnalysis list
 
+    // Results
     conditionAssessments: ConditionAssessment list
 }
 
-export model Component {
-    name: text
-    manufacturer: Manufacturer
+export const SIDES = {
+    PRIMARY: 'Primary',
+    SECONDARY: 'Secondary',
+    TERTIARY: 'Tertiary'
+}
+
+export model Component extends Asset {
     weight: number_[Mass]
     volume: number_[Volume]
+}
+
+export model Impedance {
+    fromTo: text
+    impedance: number_[Impedance]
 }
 
 export model PowerRating {

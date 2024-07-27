@@ -1,0 +1,14 @@
+domain FailureMode
+
+import './Asset'
+
+export model Function {
+    function: text "The primary function of the asset"
+    additionalFunctions?: text list "Additional functions of the asset"
+}
+
+export model FailureMode {
+    function: Function
+    mode: text "The failure mode"
+    description?: text "A description of the failure mode"
+}

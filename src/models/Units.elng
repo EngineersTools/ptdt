@@ -111,3 +111,16 @@ export unit_family Concentration {
 export unit_family Acidity {
     unit mKOHpg:MillilitresOfPotassiumHydroxidePerGram
 }
+
+export unit_family Impedance {
+    unit ohm:Ohm
+    unit kohm:kiloOhm
+    unit mohm:megaOhm
+
+    conversion ohm->kohm: (val) => val / 1000
+    conversion kohm->mohm: (val) => val / 1000
+    conversion ohm->mohm: (val) => val->kohm->mohm
+    conversion mohm->kohm: (val) => val * 1000
+    conversion kohm->ohm: (val) => val * 1000
+    conversion mohm->ohm: (val) => val->kohm->ohm
+}
