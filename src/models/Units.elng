@@ -10,7 +10,7 @@ import './Constants'
 export unit_family Time {
     unit ms:millisecond
     unit sec:second
-    unit min:minute
+    unit mn:mnute
     unit hr:hour
     unit d:day
     unit wk:week
@@ -19,8 +19,8 @@ export unit_family Time {
     unit yr:year
 
     conversion ms->sec: (val) => val / 1000
-    conversion sec->min: (val) => val / 60
-    conversion min->hr: (val) => val / 60
+    conversion sec->mn: (val) => val / 60
+    conversion mn->hr: (val) => val / 60
     conversion hr->d: (val) => val / 24
     conversion d->wk: (val) => val / 7
     conversion wk->mth: (val) => val / 4
