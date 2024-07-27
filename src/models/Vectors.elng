@@ -1,0 +1,6 @@
+domain Vectors
+
+export model Vector {
+    x: number
+    y: number
+}
