@@ -13,7 +13,19 @@ export const LIKELIHOOD = {
 }
 
 export model Risk {
-    description: text "A description of the risk"
-    severity: text "The severity of the risk"
-    likelihood: text "The likelihood of the risk"
+    name: text 
+    description: text
+    context: text
+    assessments: RiskAssessment list
+}
+
+export model RiskCriteria {
+    name: text
+    description: text
+}
+
+export model RiskAssessment {
+    criteria: RiskCriteria
+    severity: text
+    likelihood: text
 }

@@ -17,5 +17,4 @@ export model Asset {
     yearOfManufacture?: number "The year the asset was manufactured"
     manufacturerModel?: text "The model number of the asset"
     serialNumber?: text "The serial number of the asset"
-
 }

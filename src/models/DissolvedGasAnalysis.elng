@@ -3,8 +3,10 @@ domain DissolvedGasAnalysis
 import './Units'
 
 /**
-* This model describes the components of a Dissolved Gas Analysis (DGA)
-* DGA is a fundamental condition monitoring diagnosis tool for liquid-filled
+* This model describes the components of a 
+* Dissolved Gas Analysis (DGA).
+* DGA is a fundamental condition monitoring 
+* diagnosis tool for liquid-filled
 * Power Transformers
 */
 export model DissolvedGasAnalysis {
